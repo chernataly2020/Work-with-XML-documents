@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" ?>
+<xs:schema id="Заказы" xmlns:mstns="http://tempuri.org/заказы.xsd"
+	xmlns="http://tempuri.org/заказы.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="Заказы" msdata:IsDataSet="true" msdata:Locale="ru-RU" msdata:EnforceConstraints="False">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Заказ">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Товар" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Название" form="unqualified" type="xs:string" use="required" />
+									<xs:attribute name="Цена" form="unqualified" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Адрес" form="unqualified" type="xs:string" use="required" />
+						<xs:attribute name="Дата" form="unqualified" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
